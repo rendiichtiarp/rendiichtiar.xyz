@@ -3,8 +3,6 @@
   import { Metadata, PageTitle } from '$lib/components';
   import meAtParis from '../../assets/img/me-paris.webp';
   import thatsAllFolks from '../../assets/img/thats-all-folks.gif';
-
-  const songIDs = ['7AZzCQ6S8HXLFBXsqH2HWE', '4SBTecHxEs2ayXLiqs7Kmz', '78Jpy7RTri3JulwgQ9sNEP'];
 </script>
 
 <Metadata title={$_.navbar.me} />
@@ -52,18 +50,6 @@
       '%s',
       '<a href="https://last.fm/user/doceazedo911">Last.fm</a>'
     )}
-  </p>
-
-  <p class="showcase is-spotify">
-    {#each songIDs as songID}
-      <iframe
-        title="Song preview"
-        src="https://open.spotify.com/embed/track/{songID}"
-        height={80}
-        frameBorder={0}
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      />
-    {/each}
   </p>
 
   <h2>{$_.about.trivia.title}</h2>

@@ -7,7 +7,6 @@
   import 'dayjs/locale/pt-br.js';
   import { browser } from '$app/environment';
   import _ from '$lib/lang';
-  import { LIVE_DATA } from '$lib/stores/live-data';
 
   type VOD = {
     id: string;
@@ -45,22 +44,10 @@
     try {
       const resp = await fetch('/api/vods');
       allVods = await resp.json();
-      updateVideos();
     } catch (error) {
       console.error('Could not fetch VODs');
     }
   });
-
-  const updateVideos = () => {
-    vods = $LIVE_DATA?.isLive ? allVods.slice(0, 3) : allVods.slice(1);
-    if ($LIVE_DATA?.isLive) {
-      videoUrl = `${baseUrl}&channel=${channel}`;
-    } else if (allVods?.[0]) {
-      videoUrl = `${baseUrl}&video=${allVods?.[0]?.id}`;
-    }
-  };
-
-  LIVE_DATA.subscribe(updateVideos);
 
   const getDate = (dateStr: string, code: string) => {
     if (!browser) return;

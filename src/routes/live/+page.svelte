@@ -2,14 +2,14 @@
   import _ from '$lib/lang';
   import { Metadata } from '$lib/components/metadata';
   import { SupportCTA } from '$lib/components/cta';
-  import { LIVE_DATA } from '$lib/stores/live-data';
+  // import { LIVE_DATA } from '$lib/stores/live-data'; // Hapus import ini
   import TwitchPlayer from '$lib/components/twitch-player/TwitchPlayer.svelte';
 </script>
 
 <Metadata title={$_.navbar.live} />
 
 <h1 class="title">
-  {$LIVE_DATA?.isLive ? $_.streams.titleOnline : $_.streams.titleOffline}
+  {$_.streams.titleOffline} <!-- Ubah ini untuk menghapus penggunaan LIVE_DATA -->
 </h1>
 <TwitchPlayer />
 

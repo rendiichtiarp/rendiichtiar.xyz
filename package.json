@@ -32,7 +32,7 @@
     "prettier-plugin-svelte": "^3.1.2",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
-    "sass": "^1.70.0",
+    "sass": "^1.79.3",
     "svelte": "^4.2.9",
     "svelte-check": "^3.6.3",
     "svelte-feather-icons": "^4.1.0",
