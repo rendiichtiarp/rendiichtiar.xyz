@@ -1,10 +1,12 @@
 <script lang="ts">
   import _ from '$lib/lang';
-  import { LIVE_DATA } from '$lib/stores/live-data';
+  // import { LIVE_DATA } from '$lib/stores/live-data'; // Hapus import LIVE_DATA
 
   const lastfmUrl = 'https://last.fm/user/doceazedo911';
 </script>
 
+<!-- Hapus blok if yang menggunakan LIVE_DATA -->
+<!--
 {#if $LIVE_DATA?.nowPlaying}
   <a
     class="now-playing is-live"
@@ -25,6 +27,7 @@
     </div>
   </a>
 {/if}
+-->
 
 <style lang="sass">
   @import '../../../assets/sass/vars.sass'

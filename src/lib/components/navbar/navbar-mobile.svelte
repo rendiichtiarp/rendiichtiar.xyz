@@ -2,7 +2,6 @@
   import { fade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import _ from '$lib/lang';
-  import { LIVE_DATA } from '$lib/stores/live-data';
   import { HomeIcon } from '$lib/components/icons';
   import { navbarItems } from './navbar-data';
 
@@ -25,6 +24,7 @@
 
 <svelte:body on:click={handleClickOutside} />
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
   class="mobile-menu-wrapper"
   on:click={toggleMobileMenu}
@@ -41,7 +41,7 @@
     {#each navbarItems as item}
       <a href="/{item.slug}" class="mobile-menu-item">
         <svelte:component this={item.icon} />
-        <span class:live={item.slug == 'streams' && $LIVE_DATA?.isLive}>
+        <span>
           {$_.navbar[item.slug]}
         </span>
       </a>
@@ -83,17 +83,6 @@
 
         &:hover
           background-color: rgba(#fff, .1)
-
-        .live
-          position: relative
-          
-          &::after
-            @include live-badge
-            top: calc(50% - 2px)
-            right: -1rem
-            height: .5rem
-            width: .5rem
-            border: none
 
         :global(svg)
           height: 1.5rem
