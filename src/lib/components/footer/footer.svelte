@@ -1,6 +1,6 @@
 <script lang="ts">
   import _ from '$lib/lang';
-  import { FooterElevator, FooterMusicPlayer } from '.';
+  import { FooterElevator } from '.';
 </script>
 
 <footer>
@@ -20,7 +20,6 @@
     </span>
   </p>
 
-  <FooterMusicPlayer />
 </footer>
 
 <FooterElevator />

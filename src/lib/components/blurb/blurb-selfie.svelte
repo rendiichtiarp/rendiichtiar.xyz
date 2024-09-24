@@ -38,6 +38,7 @@
   };
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="blurb-selfie" on:contextmenu|preventDefault={openInstagram}>
   <figure class="selfie-wrapper">
     <img class="selfie" src={selfieSrc} alt={$_.alt.selfie} />
