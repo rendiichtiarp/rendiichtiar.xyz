@@ -5,31 +5,25 @@
   import { AudioIcon, Buttons, Button, ButtonIcon } from '$lib/components';
   import {
     GithubIcon,
-    LastfmIcon,
-    MastodonIcon,
-    TwitchIcon,
-    TwitterIcon
+    MailIcon,
+    FacebookIcon
   } from '$lib/components/icons';
-  import namePronunciationAudio from '../../../assets/audio/doce.mp3';
+  import namePronunciationAudio from '../../../assets/audio/rendiichtiar.mp3';
+  import InstagramIcon from '../icons/instagram-icon.svelte';
 
-  const githubUrl = 'https://github.com/doceazedo';
+  const instagramUrl = 'https://instagram.com/rendiichtiar';
   const socials = [
     {
-      icon: TwitterIcon,
-      href: 'https://twitter.com/doceazedo911'
+      icon: FacebookIcon,
+      href: 'https://facebook.com/rendiichtiar'
     },
     {
-      icon: MastodonIcon,
-      href: 'https://bolha.us/@doceazedo'
+      icon: GithubIcon,
+      href: 'https://github.com/rendiichtiarp'
     },
     {
-      icon: TwitchIcon,
-      href: 'https://twitch.tv/doceazedo911'
-    },
-    {
-      icon: LastfmIcon,
-      href: 'https://last.fm/user/doceazedo911',
-      isLarge: true
+      icon: MailIcon,
+      href: 'mailto:rendiichtiarprasetyo@gmail.com'
     }
   ];
 
@@ -44,7 +38,7 @@
     if (month < 0 || (month == 0 && today.getDate() < birthday.getDate())) age--;
     return age;
   };
-  const age = getAge(new Date('2003-01-21'));
+  const age = getAge(new Date('2007-05-30'));
 
   onMount(() => {
     if (!browser || !audio) return;
@@ -63,12 +57,12 @@
   </h1>
   <p class="bio">{$_.blurb.paragraph.replace('%s', age.toString())}</p>
   <Buttons>
-    <Button href={githubUrl} target="_blank">
-      <GithubIcon />
-      GitHub
+    <Button href={instagramUrl} target=_blank>
+      <InstagramIcon/>
+      Instagram
     </Button>
     {#each socials as social}
-      <ButtonIcon href={social.href} rel="me" isLarge={social?.isLarge}>
+      <ButtonIcon href={social.href} rel="me">
         <svelte:component this={social.icon} />
       </ButtonIcon>
     {/each}
@@ -108,6 +102,7 @@
     font-size: 1.25rem
     line-height: 1.25
     color: $whiteish
+    text-align: justify
     transition: color .4s ease
 
   :global([data-theme="light"])

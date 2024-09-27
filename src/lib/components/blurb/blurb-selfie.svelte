@@ -6,11 +6,11 @@
   import defaultSelfie from '../../../assets/img/me-selfie-v3.webp';
 
   $: selfieSrc = $COLOR_THEMES[$COLOR_THEME]?.selfie || defaultSelfie;
-  const instagramURL = 'https://instagram.com/doceazedo911';
+  const instagramURL = 'https://instagram.com/rendiichtiar';
 
   $: patArea = $COLOR_THEMES[$COLOR_THEME].patArea || {
-    x: 10,
-    y: 120,
+    x: 50,
+    y: 105,
     width: 90,
     height: 70
   };

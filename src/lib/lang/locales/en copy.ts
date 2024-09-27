@@ -13,7 +13,7 @@ export const en: Language = {
   blurb: {
     title: 'Hai! Aku Rendiichtiar',
     paragraph:
-      'Aku seorang desainer grafis dan pengembang web berusia %s tahun yang tinggal di Kabupaten Bekasi. Aku mulai suka desain sejak 2017, dan belakangan ini mulai belajar tentang pengembangan web. Aku senang bikin desain yang keren. Sekarang, aku lagi fokus belajar React dan terus ningkatin skill setiap hari.'
+      "I'm DoceAzedo, a %s years old curiosity-driven developer, Svelte evangelist, arch-enemy of the zeros and ones (he/they) and live coder."
   },
   skills: {
     title: 'What I like to do',

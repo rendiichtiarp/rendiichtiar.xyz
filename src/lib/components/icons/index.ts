@@ -38,3 +38,5 @@ export { default as TwitchIcon } from './twitch-icon.svelte';
 export { default as TwitterIcon } from './twitter-icon.svelte';
 export { default as UserIcon } from './user-icon.svelte';
 export { default as VomitingEmoji } from './vomiting-emoji.svelte';
+export { default as FacebookIcon } from './facebook-icon.svelte';
+export { default as MailIcon } from './mail-icon.svelte';

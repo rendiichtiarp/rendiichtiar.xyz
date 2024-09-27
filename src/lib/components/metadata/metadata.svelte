@@ -3,11 +3,11 @@
   import { IS_SLEEPING } from '$lib/stores';
 
   export let title = '',
-    description = "I'm DoceAzedo, a curiosity-driven developer, Svelte evangelist and live coder.",
+    description = "Saya Rendiichtiar, seorang desainer grafis dan frontend dev yang didorong oleh rasa ingin tahu.",
     thumbnail = '/img/thumbnail.jpg';
 
-  const baseURL = 'https://doceazedo.com';
-  $: pageTitle = !!title ? `${title} » DoceAzedo` : 'DoceAzedo';
+  const baseURL = 'https://rendiichtiar.xyz';
+  $: pageTitle = !!title ? `${title} » Rendiichtiar` : 'Rendiichtiar';
 
   $: titlePrefix = $IS_SLEEPING ? '😴 | ' : '';
 </script>

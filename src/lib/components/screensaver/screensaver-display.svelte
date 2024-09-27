@@ -50,8 +50,8 @@
   };
 </script>
 
-<div class="screensaver" transition:fade={{ duration: 200 }} on:mousemove>
-  <div class="logo" bind:this={logoEl} style="left:{x}px;top:{y}px;--color:{color}">
+<div class="screensaver" transition:fade={{ duration: 200 }} on:mousemove role="presentation">
+  <div class="logo" bind:this={logoEl} style="left:{x}px;top:{y}px;--color:{color}" role="img" aria-label="Brand logo">
     <BrandDoceAzedo enableTransitions={false} {color} />
   </div>
 </div>

@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-import fs from 'fs';
+import * as fs from 'fs';
 import jsonic from 'jsonic';
 import jp from 'jsonpath';
 import { UsesThingSection } from '../src/lib/lang';

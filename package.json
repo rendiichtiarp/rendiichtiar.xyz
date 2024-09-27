@@ -45,6 +45,7 @@
   "type": "module",
   "dependencies": {
     "@giscus/svelte": "^2.4.0",
+    "@indaco/svelte-iconoir": "^7.9.0",
     "dayjs": "^1.11.10",
     "deep-email-validator": "^0.1.21",
     "dotenv": "^16.4.1",
