@@ -20,6 +20,7 @@
     if (!browser) return;
 
     const animate = () => {
+      if (!logoEl) return;
       const logoWidth = logoEl.clientWidth;
       const logoHeight = logoEl.clientHeight;
       const screenHeight = window.innerHeight;
