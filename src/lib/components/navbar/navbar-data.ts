@@ -36,18 +36,6 @@ export const navbarItems: NavbarLink[] = [
     icon: NewspaperIcon
   },
   {
-    slug: 'talks',
-    icon: SlideshowIcon
-  },
-  {
-    slug: 'live',
-    icon: LiveIcon
-  },
-  {
-    slug: 'projects',
-    icon: CodeIcon
-  },
-  {
     slug: 'me',
     icon: UserIcon
   }

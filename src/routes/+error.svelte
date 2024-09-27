@@ -21,7 +21,11 @@
   let image: string;
 
   onMount(() => {
-    console.error(`Error ${$page.status}: ${$page.error.message}`);
+    if ($page.error) {
+      console.error(`Error ${$page.status}: ${$page.error.message}`);
+    } else {
+      console.error(`Error ${$page.status}: Unknown error`);
+    }
     const n = randomInRange(0, images.length);
     image = images[n];
   });
