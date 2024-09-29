@@ -2,7 +2,6 @@
   import { Blurb, Metadata } from '$lib/components';
   import { POSTS } from '$lib/components/posts';
   import PostsLatest from '$lib/components/posts/PostsLatest.svelte';
-  import Newsletter from '$lib/components/newsletter/Newsletter.svelte';
 
   export let data;
 
@@ -12,4 +11,3 @@
 <Metadata />
 <Blurb />
 <PostsLatest />
-<Newsletter />

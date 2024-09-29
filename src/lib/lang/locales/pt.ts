@@ -15,13 +15,6 @@ export const pt: Language = {
     paragraph:
       'Eu sou o DoceAzedo, tenho %s anos e sou um dev movido à curiosidade, evangelista de Svelte, arqui-inimigo dos zeros e uns (ele/delu) e live coder.'
   },
-  skills: {
-    title: 'O que eu gosto de fazer',
-    paragraph: [
-      'Eu deveria mudar essa seção pra uma lista dos motivos que me fazem gostar',
-      'tanto de Svelte. Mas por enquanto, vou deixar essas outras techs que eu curto:'
-    ]
-  },
   footer: ['Powered by Svelte & SvelteKit', 'Desenvolvido por DoceAzedo'],
   blog: {
     title: 'As últimas coisas que eu escrevi',

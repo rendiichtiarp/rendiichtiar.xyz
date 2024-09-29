@@ -4,14 +4,13 @@
 
   import dayjs from 'dayjs';
   import relativeTime from 'dayjs/plugin/relativeTime.js';
-  import 'dayjs/locale/pt-br.js';
+  import 'dayjs/locale/id.js';
   import Giscus from '@giscus/svelte';
   import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import _ from '$lib/lang';
   import { THEME } from '$lib/stores';
   import { Metadata } from '$lib/components';
-  import Newsletter from '$lib/components/newsletter/Newsletter.svelte';
   import '../../../assets/css/prism-material-dark.css';
 
   export let title;
@@ -31,7 +30,7 @@
   if (browser) {
     dayjs.extend(relativeTime);
     readableDate = dayjs(date)
-      .locale($_.code == 'pt' ? 'pt-br' : 'en-us')
+      .locale($_.code == 'id' ? 'id' : 'en-us')
       .fromNow();
     fullDate = dayjs(date).format('DD/MM/YYYY à[s] HH:mm');
   }
@@ -39,7 +38,7 @@
   $: {
     if (browser)
       readableDate = dayjs(date)
-        .locale($_.code == 'pt' ? 'pt-br' : 'en-us')
+        .locale($_.code == 'id' ? 'id' : 'en-us')
         .fromNow();
   }
 
@@ -77,8 +76,6 @@
 <article class="content" bind:this={articleEl}>
   <slot />
 </article>
-
-<Newsletter />
 
 <Giscus
   id="comments"

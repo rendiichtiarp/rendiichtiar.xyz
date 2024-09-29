@@ -27,7 +27,7 @@
     }
   ];
 
-  $: showAudioButton = $_.code == 'en';
+  $: showAudioButton = $_.code == 'id';
   const audio = browser && new Audio(namePronunciationAudio);
   const onClickAudioButton = () => audio && audio.play();
 

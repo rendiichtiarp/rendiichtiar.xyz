@@ -3,7 +3,7 @@
   import { languages } from './navbar-data';
 
   const switchLanguage = () => {
-    const code = $_.code == 'en' ? 'pt' : 'en';
+    const code = $_.code == 'id' ? 'en' : 'id';
     _.change(code);
   };
 </script>

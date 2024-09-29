@@ -1,12 +1,9 @@
 import {
   BookmarkIcon,
-  CodeIcon,
-  FlagBrazilIcon,
-  FlagUnitedKingdomIcon,
-  LiveIcon,
+  FlagUnitedStatesIcon,
+  FlagIndonesiaIcon,
   NewspaperIcon,
   RssIcon,
-  SlideshowIcon,
   UserIcon
 } from '$lib/components/icons';
 import type { SvelteComponent } from 'svelte';
@@ -54,6 +51,6 @@ export const shortcuts: NavbarShortcut[] = [
 ];
 
 export const languages: Languages = {
-  pt: { code: 'pt', title: 'PT-BR', icon: FlagBrazilIcon },
-  en: { code: 'en', title: 'EN', icon: FlagUnitedKingdomIcon }
+  en: { code: 'en', title: 'EN', icon: FlagUnitedStatesIcon },
+  id: { code: 'id', title: 'ID', icon: FlagIndonesiaIcon }
 };
