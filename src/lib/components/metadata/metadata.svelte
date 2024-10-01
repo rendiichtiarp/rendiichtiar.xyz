@@ -7,7 +7,7 @@
     thumbnail = '/img/thumbnail.jpg';
 
   const baseURL = 'https://rendiichtiar.xyz';
-  $: pageTitle = !!title ? `${title} » Rendiichtiar` : 'Rendiichtiar';
+  $: pageTitle = !!title ? `${title} | Rendiichtiar` : 'Rendiichtiar';
 
   $: titlePrefix = $IS_SLEEPING ? '😴 | ' : '';
 </script>

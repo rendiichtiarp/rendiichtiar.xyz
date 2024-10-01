@@ -10,6 +10,11 @@ export type Language = {
     [slug: string]: string;
   };
 
+  gallery: {
+    title: string;
+    paragraph: string;
+  }
+
   blurb: {
     title: string;
     paragraph: string;
@@ -25,38 +30,6 @@ export type Language = {
 
   footer: string[];
 
-  about: {
-    tldr: {
-      online: KeyValue;
-      physically: KeyValue;
-      professionally: KeyValue;
-      casually: KeyValue;
-      pronouns: KeyValue;
-    };
-    contact: string;
-    me: {
-      title: string;
-      photoCaption: string;
-      intro: string;
-      interests: string;
-      music: string;
-    };
-    trivia: {
-      title: string;
-      items: string[];
-    };
-    wrapup: string;
-  };
-
-  talks: {
-    title: string;
-    paragraph: string;
-    at: string;
-    watch: string;
-    resources: string;
-    resourcesPretitle: string;
-  };
-
   bookmarks: {
     title: string;
     paragraph: string;
@@ -68,90 +41,6 @@ export type Language = {
     extensions: string;
     accessibility: string;
     miscellaneous: string;
-  };
-
-  newsletter: {
-    title: string;
-    paragraph: string;
-    placeholder: string;
-    subscribe: string;
-    messages: {
-      success: string;
-      error: string;
-      openIssue: string;
-    };
-  };
-
-  projects: {
-    subtitle: string;
-    subtitleGitHub: string;
-    url: string;
-    writeup: string;
-    source: string;
-    demo: string;
-    details: {
-      [id: string]: string;
-    };
-  };
-
-  streams: {
-    titleOnline: string;
-    titleOffline: string;
-    supportMe: string;
-    subscribe: {
-      title: string;
-      paragraph: string;
-      benefits: string[];
-      prime: string;
-      sub: string;
-    };
-    donate: {
-      title: string;
-      paragraph: string;
-    };
-    icons: {
-      title: string;
-      subtitle: string;
-      copied: string;
-    };
-    pronouns: {
-      title: string;
-      subtitle: string;
-      command: string;
-      copy: string;
-    };
-    tts: {
-      title: string;
-      subtitle: string;
-      usage: {
-        default: string;
-        google: string;
-        polly: string;
-        ssml: string;
-      };
-      placeholder: {
-        message: string;
-        code: string;
-      };
-      ssmlTags: string;
-      table: {
-        lang: string;
-        code: string;
-        type: string;
-        voiceTypes: {
-          f: string;
-          m: string;
-        };
-      };
-    };
-    prime: {
-      title: string;
-      paragraph: string;
-      steps: {
-        title: string;
-        description: string;
-      }[];
-    };
   };
 
   email: string;
@@ -207,7 +96,6 @@ export type Language = {
     paragraph: string;
     hardware: {
       title: string;
-      mainPC: string;
       gamingPC: UsesThingSection;
       peripherals: {
         items: {
@@ -229,11 +117,6 @@ export type Language = {
     utils: UsesThingSection;
     extensions: UsesThingSection;
   };
-};
-
-type KeyValue = {
-  key: string;
-  value: string;
 };
 
 export type UsesThingSection = {

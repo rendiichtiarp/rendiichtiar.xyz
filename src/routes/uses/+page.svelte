@@ -16,6 +16,7 @@
   } from '$lib/components/icons';
   import UseList from './UseList.svelte';
   import setupImg from '../../assets/img/setup.webp';
+  import ArtGrid from '$lib/components/gallery/ArtGrid.svelte';
 
   type Things = {
     [key: string]: string;
@@ -34,44 +35,25 @@
     };
   };
 
-  const mainPC = 'M1 MacBook Pro 14" 2021';
   const gamingPC: Things = {
-    cpu: 'AMD Ryzen 3600X',
-    mobo: 'Gigabyte B450M DS3H',
-    ram: '24GB (3x8) Crucial Ballistix 3000MHz',
-    gpu: 'EVGA GTX 1660',
-    psu: 'Corsair CV650',
-    storage: '2TB NVMe + 480GB SATA + 500GB HDD',
-    case: 'Corsair Spec Delta RGB'
+    cpu: 'Intel i3 10100F',
+    ram: 'x2 8GB Team Group T-Force Delta 3600MHz',
+    gpu: 'Zotac GTX 1660 Ti',
+    psu: 'Cooler Master Elite V4 500W',
+    storage: '128GB SSD + 500GB HDD',
+    case: 'Cube Gaming Ilano M-ATX'
   };
   const peripherals: Things = {
-    display: 'Samsung UR550 28" 4K (👎)',
-    keyboard: 'Logitech G512 (GX Brown)',
-    mouse: 'Redragon Cobra',
-    tablet: 'Wacom CTL472',
-    headphone: 'AirPods Max',
-    mic: 'HyperX QuadCast',
-    webcam: 'iPhone 13 Pro Max',
-    desk: 'GenioDesk PLUS',
-    chair: 'GenioDesk ErgoChair'
+    display: 'LG 19"',
+    keyboard: 'Reddragon',
+    mouse: 'Redragon',
   };
 
   const generalApps: ThingsWithLinks = {
-    browser: { name: 'Chrome', url: 'https://google.com/chrome' },
+    browser: { name: 'Brave', url: 'https://brave.com' },
     music: { name: 'Spotify', url: 'https://spotify.com' },
-    passwordManager: { name: 'Bitwarden', url: 'https://bitwarden.com' },
-    docs: { name: 'Google Docs', url: 'https://docs.google.com' },
-    slides: { name: 'PowerPoint', url: 'https://microsoft.com/pt-br/microsoft-365/powerpoint' },
-    cloud: { name: 'MEGA', url: 'https://mega.nz' }
   };
 
-  const productivityApps: ThingsWithLinks = {
-    notes: { name: 'Obsidian', url: 'https://obsidian.md' },
-    drafts: { name: 'Excalidraw+', url: 'https://excalidraw.com' },
-    raycast: { name: 'Raycast', url: 'https://raycast.com' },
-    screenshot: { name: 'CleanShot X', url: 'https://cleanshot.com' },
-    videoEditing: { name: 'Filmora', url: 'https://filmora.wondershare.com.br' }
-  };
 
   const codingApps: ThingsWithLinks = {
     ideKotlin: { name: 'IntelliJ IDEA', url: 'https://jetbrains.com/idea' },
@@ -171,7 +153,6 @@
 <article class="content">
   <SubtitleWithIcon icon={ComputerIcon}>{$_.uses.hardware.title}</SubtitleWithIcon>
   <ul>
-    <li><span>{$_.uses.hardware.mainPC}:</span> {mainPC}</li>
     <li><span>{$_.uses.hardware.gamingPC.title}:</span></li>
     <ul>
       {#each Object.keys(gamingPC) as part}
@@ -182,13 +163,10 @@
       <li><span>{$_.uses.hardware.peripherals.items[item]}:</span> {peripherals[item]}</li>
     {/each}
   </ul>
-  <img src={setupImg} alt={$_.alt.setup} />
 
   <UseList things={generalApps} lang={$_.uses.general} icon={SparklesIcon} />
 
-  <UseList things={productivityApps} lang={$_.uses.productivity} icon={AttachmentIcon} />
-
-  <UseList things={codingApps} lang={$_.uses.coding} icon={CodeIcon}>
+  <!-- <UseList things={codingApps} lang={$_.uses.coding} icon={CodeIcon}>
     <li slot="pre">
       <a href="/" target="_blank" rel="noopener noreferrer">VS Code</a>
       {$_.uses.coding.items.ide}
@@ -207,17 +185,17 @@
 
     <li><span>{$_.uses.coding.web.title}:</span></li>
     <UseList things={webDevStack} lang={$_.uses.coding.web} showTitle={false} />
-  </UseList>
+  </UseList> -->
 
-  <UseList things={streamingApps} lang={$_.uses.streaming} icon={LiveIcon} />
+  <!-- <UseList things={streamingApps} lang={$_.uses.streaming} icon={LiveIcon} /> -->
 
-  <UseList things={designApps} lang={$_.uses.design} icon={PencilRulerIcon} />
+  <!-- <UseList things={designApps} lang={$_.uses.design} icon={PencilRulerIcon} /> -->
 
-  <UseList things={socialApps} lang={$_.uses.social} icon={ChatIcon} />
+  <!-- <UseList things={socialApps} lang={$_.uses.social} icon={ChatIcon} /> -->
 
-  <UseList things={utils} lang={$_.uses.utils} icon={ToolsIcon} />
+  <!-- <UseList things={utils} lang={$_.uses.utils} icon={ToolsIcon} /> -->
 
-  <UseList things={extensions} lang={$_.uses.extensions} icon={PuzzleIcon} />
+  <!-- <UseList things={extensions} lang={$_.uses.extensions} icon={PuzzleIcon} /> -->
 </article>
 
 <style lang="sass">

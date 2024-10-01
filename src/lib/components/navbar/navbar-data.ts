@@ -33,8 +33,8 @@ export const navbarItems: NavbarLink[] = [
     icon: NewspaperIcon
   },
   {
-    slug: 'me',
-    icon: UserIcon
+    slug: 'gallery',
+    icon: NewspaperIcon
   }
 ];
 
@@ -42,11 +42,6 @@ export const shortcuts: NavbarShortcut[] = [
   {
     icon: BookmarkIcon,
     href: '/uses'
-  },
-  {
-    icon: RssIcon,
-    href: '/feed.xml',
-    target: '_blank'
   }
 ];
 

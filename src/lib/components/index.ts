@@ -11,3 +11,4 @@ export * from './navbar';
 export * from './skip-to-content';
 export * from './text';
 export * from './tts';
+export * from './gallery';
